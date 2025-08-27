@@ -1,21 +1,21 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build GTK4 app",
-            "type": "shell",
-            "command": "/bin/bash",
-            "args": [
-                "-c",
-                "gcc -g /home/oldir/programing/C/gtk/main.c -o /home/oldir/programing/C/gtk/main `pkg-config --cflags --libs gtk4`"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build GTK4 app",
+      "type": "shell",
+      "command": "/bin/bash",
+      "args": [
+        "-c",
+        "gcc -g **.c $(pkg-config --cflags --libs gtk4) -o main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
 }
